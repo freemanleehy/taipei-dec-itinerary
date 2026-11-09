@@ -2,7 +2,7 @@
 const routeDays = [
   [
     [0,'桃園機場',25.078,121.233],[0,'西門町意舍',25.0451,121.5058],
-    [1,'阿義魯肉飯',25.0385,121.4981],[2,'西門紅樓',25.042,121.5078],
+    [1,'富善雞湯麵',25.0448,121.5048],[2,'西門紅樓',25.042,121.5078],
     [2,'中山堂',25.0432,121.5102,1],[2,'雪王冰淇淋',25.0448,121.5111,2],
     [3,'回意舍休息',25.0451,121.5058]
   ],
@@ -23,7 +23,7 @@ const routeDays = [
     [4,'饗 A Joy',25.0334,121.5648]
   ],
   [
-    [0,'西門徒步區',25.044,121.506],[1,'富善雞湯麵',25.0448,121.5048],
+    [0,'西門徒步區',25.044,121.506],[1,'阿義魯肉飯',25.0385,121.4981],[2,'西門町意舍取行李',25.0451,121.5058],
     [2,'台北車站高鐵',25.0478,121.517],[3,'華泰名品城',25.0151,121.2138],
     [4,'機捷 A18',25.0135,121.2147],[5,'桃園機場',25.078,121.233]
   ]
@@ -71,7 +71,7 @@ function drawRoute(day) {
     const link = document.createElement('a');
     link.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(name+' 台灣');
     const original = content.querySelectorAll('.maps a')[linkIndex];
-    if (original && !['桃園機場','回意舍休息','西門徒步區'].includes(name)) link.href = original.href;
+    if (original && !['桃園機場','回意舍休息','西門徒步區','西門町意舍取行李'].includes(name)) link.href = original.href;
     link.textContent = '在 Google Maps 開啟';
     const heading = document.createElement('h3');
     heading.textContent = (i+1) + ' · ' + name;
