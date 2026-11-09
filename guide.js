@@ -7,6 +7,8 @@ function showPanel() {
     if (item.hash === '#' + active) item.setAttribute('aria-current','page');
     else item.removeAttribute('aria-current');
   }
+  if (/^d[1-5]$/.test(active)) lastItineraryDay = Number(active.slice(1)) - 1;
+  if (active === "map") drawRoute(lastItineraryDay);
   if (id) document.getElementById(active).scrollIntoView();
 }
 window.addEventListener('hashchange', showPanel);

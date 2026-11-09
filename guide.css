@@ -13,3 +13,10 @@ section,.scroll,footer { padding:clamp(14px,3vw,28px); background:white; border:
 .maps a { color:#315778 }
 @media print { [hidden]{display:block!important} }
 .transit { background:#eff4f6; border-left:3px solid #507783; padding:9px 12px; font-size:.94em; }
+#route-map { height:clamp(320px,50vh,520px); border-radius:12px; background:#e5ebe5; isolation:isolate }
+#map-days,#map-stops { display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 }
+#map button { cursor:pointer }
+#map-days button,#map-stops button { font:inherit;font-size:15px;padding:6px 11px;background:white;border:1px solid #c2cbd1;border-radius:7px }
+#map button[aria-pressed=true] { background:#a94711;color:white }
+.number-pin { background:#254a53;color:white;border:2px solid white;border-radius:50%;font:bold 14px/26px sans-serif;text-align:center;box-shadow:0 1px 4px #3338 }
+.selected-pin { background:#ac4611 }
