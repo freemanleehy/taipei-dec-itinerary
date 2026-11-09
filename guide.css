@@ -12,3 +12,4 @@ section,.scroll,footer { padding:clamp(14px,3vw,28px); background:white; border:
 .when { color:#a64810 }
 .maps a { color:#315778 }
 @media print { [hidden]{display:block!important} }
+.transit { background:#eff4f6; border-left:3px solid #507783; padding:9px 12px; font-size:.94em; }
